@@ -15,22 +15,23 @@
     <script src="app.js"></script>
     <script src="controllers.js"></script>
 
-    <title>Catstagram</title>
+    <title>CNote</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+<body ng-app="app">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">CNoté</a>
+            <a class="navbar-brand" href="#">CNote</a>
         </div>
         <ul class="nav navbar-nav">
             <li ng-class="{active: open}" ng-onclick="open = !open"><a href="#">New</a></li>
         </ul>
     </div>
 </nav>
-    <body ng-app="app">
-        <div data-ui-view></div>
-    </body>
+<div class="navbar navbar-default"></div>
+
+<div data-ui-view></div>
+</body>
 
 </html>
