@@ -6,9 +6,8 @@
     </div>
 </div>
 
-<div class="postit">
-    <div class="title">Title</div>
-    <p>loremipsum dolor si amet, obreptans itun de mequeri dystum et quartem supa estum</p>
-
-    <div class="info">by dude at date</div>
+<div class="postit" ng-repeat="p in posts track by $index">
+    <div class="title">{{p.title}}</div>
+<p>{{p.content}}</p>
+    <div class="info">by {{p.user}}</div>
 </div>
