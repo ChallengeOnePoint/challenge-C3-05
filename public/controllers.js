@@ -1,4 +1,4 @@
-angular.module('app').controller('ListController', function ($scope, $state) {
+angular.module('app').controller('BoardController', function ($scope, $state) {
     $scope.images = [];
     $.get({
         url: 'kittenIdentity.json',

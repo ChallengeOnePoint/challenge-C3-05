@@ -11,10 +11,10 @@ angular
                templateUrl: 'views/clients.html',
                controller: 'ClientsController'
            })*/
-            .state('list', {
+            .state('board', {
             url: '/',
-            templateUrl: 'image_flow.html',
-            controller: 'ListController'
+            templateUrl: 'board.html',
+            controller: 'BoardController'
         })
         $urlRouterProvider.otherwise('/');
     }])
