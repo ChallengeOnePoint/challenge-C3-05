@@ -1,5 +1,6 @@
 angular.module('app').controller('BoardController', function ($scope, $state, $rootScope) {
     $scope.posts = [];
+    $scope.open = false;
     $.get({
         url: '/postits',
         success: function (res) {

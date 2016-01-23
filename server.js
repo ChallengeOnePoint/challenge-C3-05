@@ -32,7 +32,3 @@ io.on('connection', function(socket){
 		socket.emit('update_board', postits);
 	}
 });
-app.get('/', function (req, res) {
-
-});
-
