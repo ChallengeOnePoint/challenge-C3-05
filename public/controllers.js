@@ -1,14 +1,24 @@
-angular.module('app').controller('BoardController', function ($scope, $state) {
-    $scope.images = [];
+angular.module('app').controller('BoardController', function ($scope, $state, $rootScope) {
+    $scope.posts = [];
     $.get({
-        url: 'kittenIdentity.json',
+        url: '/postits',
         success: function (res) {
-            $scope.images = res;
+            $scope.posts = res;
+	    console.log($scope.posts);
             $scope.$apply;
         }
     })
+    $rootScope.socket.on('update_board', function (data) {
+	$scope.posts = data;
+	}
+
+    $scope.create = function () {
+	}
+
+    $scope.update = function (index){ };
     
+
     $scope.remove = function (index) {
-        $scope.images.splice(index, 1);
+
     }
 })

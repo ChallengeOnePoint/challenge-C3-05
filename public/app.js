@@ -1,9 +1,8 @@
 angular
     .module('app', [
     'ui.router',
-    'ui.bootstrap',
-    'cgPrompt',
-    'ngTable'])
+    'ui.bootstrap'
+    ])
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $stateProvider
         /*   .state('clients', {
@@ -18,3 +17,7 @@ angular
         })
         $urlRouterProvider.otherwise('/');
     }])
+    .run(['$state', '$rootScope', function ($state, $rootScope) {
+	$rootScope.socket = io.connect();
+ }]);
+
