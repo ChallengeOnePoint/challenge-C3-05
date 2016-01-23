@@ -1,7 +1,7 @@
-<div ng-show="$root.open">
+<div class="postit" ng-show="$root.open">
     <div class="form">
-	<input type="text" ng-model="new.title" class="form-control" />
-	<textarea ng-model="new.content" class="form-control"></textarea>
+	<input name="ttle" type="text" ng-model="new.title" class="form-control" placeholder="title" />
+	<textarea name="content" ng-model="new.content" class="form-control" placeholder="content"></textarea>
 	<button class="btn btn-default" ng-click="create()" >Submit</button>
     </div>
 </div>
