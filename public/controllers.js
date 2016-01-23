@@ -10,7 +10,7 @@ angular.module('app').controller('BoardController', function ($scope, $state, $r
     })
     $rootScope.socket.on('update_board', function (data) {
 	$scope.posts = data;
-	}
+	});
 
     $scope.create = function () {
 	}
