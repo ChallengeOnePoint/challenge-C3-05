@@ -18,6 +18,7 @@ angular
         $urlRouterProvider.otherwise('/');
     }])
     .run(['$state', '$rootScope', function ($state, $rootScope) {
+	$rootScope.open = false;
 	$rootScope.socket = io.connect();
  }]);
 

@@ -1,6 +1,6 @@
 angular.module('app').controller('BoardController', function ($scope, $state, $rootScope) {
     $scope.posts = [];
-    $scope.open = false;
+    $scope.new = {};
     $.get({
         url: '/postits',
         success: function (res) {
@@ -14,6 +14,9 @@ angular.module('app').controller('BoardController', function ($scope, $state, $r
 	});
 
     $scope.create = function () {
+	console.log($scope.new);
+	$rootScope.socket.emit('new_post', $scope.new);
+	$scope.new = {};
 	}
 
     $scope.update = function (index){ };
